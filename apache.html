@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Web Hosting Toolkit Apache</title>             
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+   <meta name="keywords" content="Control Panel, hosting server maintenance, hosting software, Web Hosting Toolkit, WHT">
+  <meta name="description" content="Complete solution for webhosting maintenance.">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+  <body>
+<a href="index.html">Home</a>     
+<div align="center"><font size="+2"><b>Apache</b></font><br>
+   </div>
+ <br>
+ <br>
+ &nbsp;&nbsp;&nbsp;Apache have to be configured for name based virtual hosting.
+ At the end of httpd.conf but before the row<br><br>
+ <div class=darkred>
+ include /etc/httpd/conf/include/include
+ </div>
+ <br><br>
+ 
+ Apache needs these directives:<br><br>
+ 
+ <div class=darkred>
+ <br>
+ # Replace 192.168.1.2 with your IP address. Must be the same<br>
+ # as the value of the $virtual_host_ip variable in conf_inc.php<br>
+ # Replace wht.org with your system domain.<br>
+ <br>
+ NameVirtualHost 192.168.1.2<br>
+ <br>
+ # This should be your system domain virtual area<br>
+ <br>
+ &lt;VirtualHost 192.168.1.2&gt;<br>
+ <br>
+&nbsp;&nbsp;ServerName wht.org<br>
+&nbsp;&nbsp;ServerAlias www.wht.org<br>
+&nbsp;&nbsp;RLimitCPU	30<br>
+&nbsp;&nbsp;RLimitMem	20000000<br>
+&nbsp;&nbsp;RLimitNProc	20<br>
+<br>
+&nbsp;&nbsp;DocumentRoot /var/www/html<br>
+&nbsp;&nbsp;Options Includes Indexes FollowSymlinks<br>
+&nbsp;&nbsp;DirectoryIndex index.php index.php3 index.html index.htm<br>
+<br>
+&nbsp;&nbsp;AddType application/x-httpd-php .php<br>
+<br>
+&nbsp;&nbsp;ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"<br>
+<br>
+<br>	
+&nbsp;&nbsp;CustomLog /var/log/httpd/access_log combined<br>
+&nbsp;&nbsp;ErrorLog /var/log/httpd/error_log<br>
+<br>
+&lt;/VirtualHost&gt;<br>
+<br>
+# If HTTP 1.0 is used from the clienc or some script<br>
+# it will not recognize the virtual hosts. So you have to enable<br>
+# PHP in the DocumentRoot directory<br>
+<br>
+&lt;Directory /var/www/html&gt;<br>
+<br>
+AddType application/x-httpd-php .php<br>
+<br>
+&lt;/Directory&gt;<br>
+<br>
+</div>
+ <br>
+ &nbsp;Probably PHP is enabled globally. You have to disable it.
+ WHT will enable PHP inside the virtual hosts' areas. So outside virtual host area
+ must not have:<br>
+ <br>
+ <div class=darkred>
+ AddType application/x-httpd-php .php
+ </div>
+ <br>
+ or<br>
+ <br>
+ <div class=darkred>
+ &lt;Files *.php&gt;<br>
+&nbsp;&nbsp;SetOutputFilter PHP<br>
+&nbsp;&nbsp;SetInputFilter PHP<br>
+&nbsp;&nbsp;LimitRequestBody 524288<br>
+&lt;/Files&gt;
+</div>
+<br>
+<div class=darkred>
+Note: In RedHat 9 the above directives are included as separate file
+/etc/httpd/conf.d/php.conf. Just disable them.
+</div>
+ <br>
+ <br>
+ &nbsp;&nbsp;&nbsp;To serve the sites Apache needs to be configured every 
+time a user registers or deletes new domain. In fact, WHT configures the web server only 
+once a day. That's because Apache have to be restarted for the changes to
+take effect. This is done by the script wht_cron.php. The script is run by
+crond at the time you specified when installing (2 a.m.).wht_cron.php configures&nbsp;<a
+ href="bind.html">BIND</a> &nbsp;too and makes a few checks:  checks for expired
+ domains and users using MySQL, checks for exceeded quota (including the databases'
+ sizes), checks for users that have no domains. The script notifies the admin if there is
+ something wrong.<br>
+ &nbsp;&nbsp;&nbsp;Every month another script wht_apache_log.php checks Apache's
+log files for exceeded traffic and notifies the administrator,&nbsp; compresses
+the files and restarts Apache to create new logs.<br>
+&nbsp;&nbsp;&nbsp;Both scripts restart Apache gracefully (# apachectl graceful).<br>
+ <br>
+ &nbsp;&nbsp;&nbsp; When a domain is registered the following section is
+included as a separate file in httpd.conf<br>
+ <br>
+ 
+<div class=darkred>
+<br>
+&lt;VirtualHost 192.168.1.2&gt;<br>
+   <br>
+ &nbsp;&nbsp;&nbsp; ServerName domain1.com<br>
+ &nbsp;&nbsp;&nbsp; ServerAlias www.domain1.com<br>
+ &nbsp;&nbsp;&nbsp; RLimitCPU&nbsp;&nbsp;&nbsp; 30<br>
+ &nbsp;&nbsp;&nbsp; RLimitMem&nbsp;&nbsp;&nbsp; 20000000<br>
+ &nbsp;&nbsp;&nbsp; RLimitNProc&nbsp;&nbsp;&nbsp; 20<br>
+   <br>
+ &nbsp;&nbsp;&nbsp; DocumentRoot /var/www/home/w/www/domain1.com<br>
+ &nbsp;&nbsp;&nbsp; DirectoryIndex index.php index.php3 index.html index.htm<br>
+   <br>
+ &nbsp;&nbsp;&nbsp; LogFormat " %b" wht_log<br>
+ &nbsp;&nbsp;&nbsp; CustomLog /var/log/wht/bytes/domain1.com wht_log<br>
+ &nbsp;&nbsp;&nbsp; CustomLog /var/log/wht/access_domain1.com common<br>
+ &nbsp;&nbsp;&nbsp; ErrorLog /var/log/wht/error_domain1.com<br>
+   <br>
+ &lt;/VirtualHost&gt;<br>
+ <br>
+   </div>
+ <br>
+ If PHP and CGI enabled<br>
+ <br>
+ 
+<div class=darkred>
+<br>
+&lt;VirtualHost 192.168.1.2&gt;<br>
+   <br>
+&nbsp;&nbsp; ServerName domain1.com<br>
+&nbsp;&nbsp; ServerAlias www.domain1.com<br>
+&nbsp;&nbsp; RLimitCPU&nbsp;&nbsp;&nbsp; 30<br>
+&nbsp;&nbsp; RLimitMem&nbsp;&nbsp;&nbsp; 20000000<br>
+&nbsp;&nbsp; RLimitNProc&nbsp;&nbsp;&nbsp; 20<br>
+   <br>
+&nbsp;&nbsp; DocumentRoot /var/www/home/w/www/domain1.com<br>
+&nbsp;&nbsp; DirectoryIndex index.php index.php3 index.html index.htm<br>
+   <br>
+&nbsp;&nbsp; AddType application/x-httpd-php .php<br>
+   <br>
+&nbsp;&nbsp; ScriptAlias /cgi-bin/ "/var/www/home/w/www/domain1.com_cgi-bin/"<br>
+   <br>
+&nbsp;&nbsp; php_admin_value open_basedir /var/www/home/www/w/domain1.com<br>
+<br>
+&nbsp;&nbsp; SuexecUserGroup w w<br>
+<br>
+&nbsp;&nbsp; LogFormat " %b" wht_log<br>
+&nbsp;&nbsp; CustomLog /var/log/wht/bytes/domain1.com wht_log<br>
+&nbsp;&nbsp; CustomLog /var/log/wht/access_domain1.com common<br>
+&nbsp;&nbsp; ErrorLog /var/log/wht/error_domain1.com<br>
+   <br>
+&lt;/VirtualHost&gt;<br>
+ <br>
+   </div>
+ <br>
+ For free account if $enable_cgi_free="off" (default)<br>
+ <br>
+<div class=darkred>
+<br>
+&lt;VirtualHost 192.168.1.2&gt;<br>
+   <br>
+&nbsp;&nbsp; ServerName domain1.com<br>
+&nbsp;&nbsp; ServerAlias www.domain1.com<br>
+&nbsp;&nbsp; RLimitCPU&nbsp;&nbsp;&nbsp; 30<br>
+&nbsp;&nbsp; RLimitMem&nbsp;&nbsp;&nbsp; 20000000<br>
+&nbsp;&nbsp; RLimitNProc&nbsp;&nbsp;&nbsp; 20<br>
+   <br>
+&nbsp;&nbsp; DocumentRoot /var/www/home/w/www/domain1.com<br>
+&nbsp;&nbsp; DirectoryIndex index.php index.php3 index.html index.htm<br>
+   <br>
+&nbsp;&nbsp; ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"<br>
+<br>
+&nbsp;&nbsp; Action text/html /cgi-bin/wht_handler.cgi<br>
+<br>
+&nbsp;&nbsp; LogFormat " %b" wht_log<br>
+&nbsp;&nbsp; CustomLog /var/log/wht/bytes/domain1.com wht_log<br>
+&nbsp;&nbsp; CustomLog /var/log/wht/access_domain1.com common<br>
+&nbsp;&nbsp; ErrorLog /var/log/wht/error_domain1.com<br>
+<br>
+ &lt;/VirtualHost&gt;<br>
+<br>
+</div>
+<br>
+ For free account if $enable_cgi_free="on" (experimental)<br>
+ <br>
+<div class=darkred>
+<br>
+&lt;VirtualHost 192.168.1.2&gt;<br>
+   <br>
+&nbsp;&nbsp; ServerName domain1.com<br>
+&nbsp;&nbsp; ServerAlias www.domain1.com<br>
+&nbsp;&nbsp; RLimitCPU&nbsp;&nbsp;&nbsp; 30<br>
+&nbsp;&nbsp; RLimitMem&nbsp;&nbsp;&nbsp; 20000000<br>
+&nbsp;&nbsp; RLimitNProc&nbsp;&nbsp;&nbsp; 20<br>
+   <br>
+&nbsp;&nbsp; DocumentRoot /var/www/home/w/www/domain1.com<br>
+&nbsp;&nbsp; DirectoryIndex index.php index.php3 index.html index.htm<br>
+&nbsp;&nbsp; ScriptAlias /cgi-bin/ "/var/www/home/w/www/domain1.com_cgi-bin/"<br>
+<br>
+&nbsp;&nbsp;ExtFilterDefine wht_ext_filter mode=output \<br>
+&nbsp;&nbsp;cmd="/bin/wht_ext_filter /var/www/home/w/domain1.com/some_file.html"<br>
+<br>
+&nbsp;&nbsp;SetOutputFilter wht_ext_filter<br>
+<br>
+&nbsp;&nbsp; SuexecUserGroup w w<br>
+<br>
+&nbsp;&nbsp; LogFormat " %b" wht_log<br>
+&nbsp;&nbsp; CustomLog /var/log/wht/bytes/domain1.com wht_log<br>
+&nbsp;&nbsp; CustomLog /var/log/wht/access_domain1.com common<br>
+&nbsp;&nbsp; ErrorLog /var/log/wht/error_domain1.com<br>
+   <br>
+ &lt;/VirtualHost&gt;<br>
+<br>
+</div>
+<br>
+<br>
+&nbsp;&nbsp;You can run wht_cron.php more than once a day but I do not recommend.<br>
+<br>
+&nbsp;&nbsp;If you want to allow your users using .htaccess files include the following
+directives in httpd.conf:<br>
+<br>
+<div class=darkred>
+<br>
+# /var/www/home is the home directory. Must be the same<br>
+# as the value of the $userhomedir variable in conf_inc.php<br>
+<br>
+&lt;Directory /var/www/home&gt;<br>
+&nbsp;&nbsp;AllowOverride FileInfo Indexes AuthConfig Limit<br>
+&nbsp;&nbsp;Options MultiViews Indexes SymLinksIfOwnerMatch IncludesNoExec<br>
+&lt;/Directory&gt;<br>
+<br>
+</div>
+<br>
+<br>
+<br>
+<div class=footer>
+ developer: Nikolay Ivanov <i>email: </i>
+   <a href="mailto:nivanov@email.com">nivanov@email.com</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+body {
+    margin: 25px 30px;
+    color:#f5f5f5;
+    background-color: #950000;
+    background-position: top left;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url(../images/wht.png);
+    font-size:10pt;
+    font-family: sans;
+}
+
+table {
+    font-size:10pt;
+    font-family: sans;
+}
+
+a {
+    color: #f0e5bb;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+div.darkred {
+    background-color: #850000;
+    margin-left: 20;
+    margin-right: 20;
+    font-size: 90%
+}
+
+div.footer {
+    text-align: center;
+    color: cce0bb;
+    font-size: 10px;
+    font-family: sans;
+    font-weight: bold;
+}
+
+div.order {
+    margin-left: 20;
+    width: 450px;
+    font-size: 12px;
+    font-family: sans;
+    font-weight: bold;
+}
+a.anchor {
+    color: #F4F4F4;
+    text-decoration: none;
+}
