@@ -1,0 +1,59 @@
+body {
+    margin: 5px 30px;
+    color:#f5f5f5;
+    background-color: #950000;
+    background-position: top left;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url(../../images/wht.png);
+    font-size:10pt;
+    font-family: sans;
+}
+
+a {
+    color: #f0e5bb;
+}
+
+div {
+    background-color: #950000
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+font.domain {
+    font-size: 90%;
+    color: #aaffaa;
+}
+
+font.email {
+    font-size: 90%;
+    color: #aaeeff;
+}
+
+font.alias {
+    font-size: 90%;
+    color: #ffbb88;
+}
+
+font.zone {
+    font-size: 90%;
+    color: #aaeeff;
+}
+
+font.user {
+    font-size: 90%;
+    color: #ffddee;
+}
+
+font.delete {
+    text-decoration: underline;
+    font-size: 90%; color: #0000b0;
+}
+
+table {
+    font-size:10pt;
+    font-family: sans;
+}

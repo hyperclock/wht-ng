@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Web Hosting Toolkit FAQ</title>
+                    
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+   <meta name="keywords" content="Control Panel, hosting server maintenance, hosting software, Web Hosting Toolkit, WHT">
+  <meta name="description" content="Complete solution for webhosting maintenance.">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+  <body>
+<a href="index.html">Home</a>     
+<div align="center"><font size="+2"><b>FAQ</b></font><br>
+   </div>
+<br>
+<br>
+<a href="#1">1. I want to back up the system. Where WHT stores the important data?</a>
+<br>
+<a href="#2">2. Where are the Apache's configuration files and can I edit them?</a>
+<br>
+<br>
+<a name="1">1. I want to back up the system. Where WHT stores the important data?</a>
+<br>
+<br>
+&nbsp;&nbsp;The most important directory is where the home directories of all the users are.
+WHT creates the home directories in the directory set to the $userhomedir variable
+in conf_inc.php. By default it is:
+<br>
+<br>
+<div class=darkred>
+/var/www/home
+</div>
+<br>
+<br>
+&nbsp;&nbsp;The directory where the Apache's configuration files are.
+WHT stores them in the include subdirectory of the main Apache's configuration directory.
+Usually it is:
+<br>
+<br>
+<div class=darkred>
+/etc/httpd/conf/include
+</div>
+<br>
+<br>
+But you can back up all the /etc/httpd directory.
+<br>
+<br>
+&nbsp;&nbsp;The directories where BIND's configuration files are:
+<br>
+<br>
+<div class=darkred>
+<br>
+/etc/wht_named
+<br>
+<br>
+and usually
+<br>
+<br>
+/var/named
+<br>
+<br>
+</div>
+<br>
+<br>
+&nbsp;&nbsp;The directory where Cron's configuration files are. Usually:
+<br>
+<br>
+<div class=darkred>
+/var/spool/cron
+</div>
+<br>
+<br>
+&nbsp;&nbsp;The directories used by AWStats (If you have installed it). Usually:
+<br>
+<br>
+<div class=darkred>
+<br>
+/etc/awstats
+<br>
+<br>
+and
+<br>
+<br>
+/var/cache/awstats
+<br>
+<br>
+</div>
+<br>
+<br>
+&nbsp;&nbsp;The Qmail configuration directories and the users' mailboxes:
+<br>
+<br>
+<div class=darkred>
+<br>
+/var/qmail/control
+<br>
+<br>
+and
+<br>
+<br>
+/home/vpopmail/domains
+<br>
+<br>
+</div>
+<br>
+<br>
+&nbsp;&nbsp;Don't forget to back up the MySQL databases. Usually they are stored in:
+<br>
+<br>
+<div class=darkred>
+/var/lib/mysql
+</div>
+<br>
+<br>
+<a name="2">2. Where are the Apache's configuration files and can I edit them?</a>
+<br>
+<br>
+&nbsp;&nbsp;There is a separate file for every domain and subdomain in
+/etc/httpd/conf/include. You can edit them, but WHT will rewrite the edited file if you or the
+user enables (disables) CGI and PHP or convert the account from free to commercial
+(or back).
+<br>
+<br>
+
+<br>
+<div class=footer>
+ developer: Nikolay Ivanov <i>email: </i>
+   <a href="mailto:nivanov@email.com">nivanov@email.com</a>
+</div>
+</body>
+</html>

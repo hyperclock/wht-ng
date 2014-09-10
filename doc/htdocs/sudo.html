@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Web Hosting Toolkit Sudo</title>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <meta name="author" content="Nikolay Ivanov">
+   <meta name="keywords" content="Control Panel, hosting server maintenance, hosting software, Web Hosting Toolkit, WHT">
+  <meta name="description" content="Complete solution for webhosting maintenance.">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+<div>
+<a href="index.html">Home</a>
+<div align="center"><font size="+2"><b>Sudo</b></font><br>
+</div>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;WHT uses sudo to make the apache user execute commands
+as if they are executed from the root user.<br>
+The main purpose is to make the web server execute root commands - /usr/sbin/useradd, 
+/bin/chmod, /usr/sbin/userdel, /usr/sbin/usermod, /usr/sbin/setquota..<br><br>
+
+How this works:<br><br>
+
+1. When installing you created apache user and group and changed the password:
+<br>
+<br>
+&nbsp;&nbsp;&nbsp; # groupadd apache<br>
+&nbsp;&nbsp;&nbsp; # useradd -g apache apache<br>
+&nbsp;&nbsp;&nbsp; # passwd apache<br>
+<br>
+and changed the two directives in httpd.conf file User apache and Group apache.<br><br>
+
+Now the web server runs all the scripts as user apache. Every time WHT have to
+ execute a root command it runs the following in the shell:<br><br>
+ 
+ &nbsp;&nbsp;&nbsp; # sudo -v<br><br>
+ 
+ Sudo checks wheather apache is in the /etc/sudoers file. If there is a row <br><br>
+ apache   ALL = PASSWD: ALL<br><br>
+ (when installing you inserted it) and asks for the apache's password.<br>
+ WHT replies with the password you specified in the configuration file ($httpd_passwd).
+ If it is the apache's password sudo allows apache to run a command as if it is root.<br>
+ Then WHT executes the desired command<br><br>
+  
+ &nbsp;&nbsp;&nbsp; # sudo -u root command<br><br>  
+  
+and because of a security reason tells sudo to ask for the apache's password next time
+it tries to run a root command<br><br>
+ 
+ &nbsp;&nbsp;&nbsp; # sudo -k<br><br>
+   
+To check wheather the described procedure works go to http://your_domain.com/wht/sudo_check.php<br>
+If there is something wrong you will see a blank page.
+ 
+<br>
+<br>
+<br>
+<div class=footer>
+ developer: Nikolay Ivanov <i>email: </i>
+   <a href="mailto:nivanov@email.com">nivanov@email.com</a>
+</div>
+</div>
+</body>
+</html>

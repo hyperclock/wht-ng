@@ -1,0 +1,27 @@
+WHT will not tell the user how to register his domain name.
+The administrator have to inform the user: 
+
+
+
+THANK YOU!
+
+Dear Web Enthusiast,
+
+Thank you for applying for our affordable web hosting solution!
+
+We will need several things from you in order to start the hosting for your web site:
+
+   1. Please provide us with the information about your web site:
+      a) Do you have the domain name registered?
+      If it's NOT registered, we can register the domain name for you for $11.25 (yearly fee).
+      However, this fee is required only if you want us to register domain name, otherwise,
+      NO ADDITIONAL FEE is required.
+
+      If you have registered the domain name already, you will have to change the DNS
+      servers information to reflect our hosts' nameservers:
+      !!! - here primary and secondary name servers - !!!.
+      If you don't know how, please provide us with the information about your domain name
+      holder (where you have registered your domain). We will need the URL address, login
+      name and password in order to change the DNS information for you. Later, you can
+      change your password to maintain the security.
+

@@ -1,0 +1,46 @@
+// For flashmod.com only
+$php_version = phpversion();
+$php_version_explode = explode(".", $php_version);
+
+if(!function_exists('import_request_variables')) {
+    function import_request_variables($a, $b)
+        {
+
+        }
+}
+
+if($php_version_explode[0] === 4 && $php_version_explode[1] < 1) {
+    session_start();
+
+    global $HTTP_SESSION_VARS;
+
+    if($HTTP_SESSION_VARS) {
+        foreach ($HTTP_SESSION_VARS as $key => $value) {
+            $_SESSION['$key']=$value;
+        }
+    }
+
+    foreach ($HTTP_POST_VARS as $key => $value) {
+        $_POST['$key'] = $value;
+        $$key = NULL;
+        $key = "p_".$key;
+        $$key = $value;
+    }
+
+
+    foreach ($HTTP_GET_VARS as $key => $value) {
+        $_GET['$key'] = $value;
+        $$key = NULL;
+        $key = "g_".$key;
+        $$key = $value;
+    }
+
+}
+
+// For flashmod.com only end
+
+
+
+
+
+

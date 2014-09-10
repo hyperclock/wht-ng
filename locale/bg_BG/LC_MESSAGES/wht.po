@@ -1,0 +1,789 @@
+# translation of wht.po to Bulgarian
+# Web Hosting Toolkit Bulgarian Translation
+# Copyright (c) 1999-2003 The WHT Developer
+# Nikolay Ivanov <nivanov@email.com>, 2003.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: wht\n"
+"POT-Creation-Date: 2003-10-25 09:07+0300\n"
+"PO-Revision-Date: 2003-10-25 20:57+0300\n"
+"Last-Translator: Nikolay Ivanov <nivanov@email.com>\n"
+"Language-Team: Bulgarian <nivanov@email.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=koi8-r\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0\n"
+
+# Activate MySQL function
+msgid "User Properties"
+msgstr "Потребителски характеристики"
+
+# Full phrase "Activate MySQL for $num months."
+msgid "Activate MySQL for"
+msgstr "Активирай MySQL  за"
+
+msgid "months"
+msgstr "месеца"
+
+msgid "Reset"
+msgstr "Възстанови"
+
+msgid "Calculate"
+msgstr "Изчисли"
+
+msgid "Submit"
+msgstr "Изпрати"
+
+# Domains function
+msgid "domain"
+msgstr "домейн"
+
+msgid "Domains"
+msgstr "Домейни"
+
+msgid "User"
+msgstr "Потребител"
+
+msgid "% of disk quota in use"
+msgstr "% от дисковото пространство е заето"
+
+msgid "Change category"
+msgstr "Промени категорията"
+
+msgid "Remove advertisement"
+msgstr "Премахни рекламата"
+
+msgid "Delete"
+msgstr "Изтрий"
+
+msgid "Are you sure you want to delete"
+msgstr "Сигурен ли сте че искате да изтриете"
+
+msgid "Modify"
+msgstr "Промени"
+
+msgid "zone"
+msgstr "зона"
+
+msgid "New subdomain"
+msgstr "Нов поддомейн"
+
+msgid "Register new domain"
+msgstr "Регистрирай нов домейн"
+
+# Change email password function
+msgid "Change Email Password"
+msgstr "Промяна на имейл парола"
+
+msgid "Email"
+msgstr "Имейл"
+
+msgid "Password"
+msgstr "Парола"
+
+msgid "Confirm password"
+msgstr "Потвърдете паролата"
+
+msgid "Change"
+msgstr "Промени"
+
+msgid "File Properties"
+msgstr "Файлови характеристики"
+
+msgid "file"
+msgstr "файл"
+
+msgid "Class"
+msgstr "Клас"
+
+msgid "Read"
+msgstr "Чети"
+
+msgid "Write"
+msgstr "Пиши"
+
+msgid "Exec"
+msgstr "Изпълни"
+
+msgid "Group"
+msgstr "Група"
+
+msgid "Others"
+msgstr "Други"
+
+msgid "Last Modified"
+msgstr "Последно редактиран"
+
+msgid "Show"
+msgstr "Покажи"
+
+msgid "Enter"
+msgstr "Влез"
+
+msgid "Close"
+msgstr "Затвори"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Cancel"
+msgstr "Прекрати"
+
+# FTP Client
+msgid "Client File Manager"
+msgstr "Файлов мениджър - Клиент"
+
+msgid "C L I E N T"
+msgstr "К Л И Е Н Т"
+
+msgid "files to upload"
+msgstr "файла за трансфер"
+
+msgid "Send this file"
+msgstr "Изпрати този файл"
+
+msgid "Can't upload all the files"
+msgstr "Не мога да трансферирам всички файлове"
+
+# Cron function - Browse
+msgid "Choose Executable"
+msgstr "Избор на файл за изпълнение"
+
+msgid "To choose file click it's icon"
+msgstr "За да изберете файл кликнете върху иконата му"
+
+msgid "up"
+msgstr "нагоре"
+
+msgid "name"
+msgstr "име"
+
+#Cron function - Change Email
+msgid "Change Email"
+msgstr "Промяна на имейл"
+
+msgid "New email"
+msgstr "Нов имейл"
+
+# Cron function
+msgid "minute"
+msgstr "минута"
+
+msgid "day of month"
+msgstr "ден от месеца"
+
+msgid "month"
+msgstr "месец"
+
+msgid "day of week"
+msgstr "ден от седмицата"
+
+msgid "path to the executable file"
+msgstr "път до файла за изпълнение"
+
+msgid "hour"
+msgstr "час"
+
+msgid "every"
+msgstr "всеки"
+
+msgid "Browse"
+msgstr "Избери"
+
+msgid "To select more than one option use the Ctrl key and the Left mouse button"
+msgstr "За да изберете повече от една опция използвайте клавиша Ctrl и левия бутон на мишката"
+
+msgid "If some of the programmes output a text it will be sent to email"
+msgstr "Текстът изведен от програмите ще бъде изпращан на имейл"
+
+# The text editor"
+msgid "Edit File"
+msgstr "Текстов редактор"
+
+msgid "Close without saving the file?"
+msgstr "Да затворя прозореца без да съхраня промените?"
+
+msgid "Save"
+msgstr "Съхрани"
+
+# Email Accounts function
+msgid "Email Accounts"
+msgstr "Пощенски кутии"
+
+msgid "Create new email"
+msgstr "Създай нова пощенска кутия"
+
+# The full aentance:
+# You can use 5 email accounts with this domain
+msgid "You can use"
+msgstr "Можете да използвате"
+
+msgid "email accounts with this domain"
+msgstr "пощенски кутии с този домейн"
+
+msgid "Forward to"
+msgstr "Пренасочи към"
+
+msgid "email"
+msgstr "имейл"
+
+msgid "Are you sure you want to delete the email?"
+msgstr "Сигурен ли сте, че искате да изтриете имейла?"
+
+msgid "Change password"
+msgstr "Промени паролата"
+
+msgid "forwarded to"
+msgstr "пренасочен към"
+
+msgid "Are you sure you want to stop forwarding?"
+msgstr "Сигурен ли сте, че искате да прекратите пренасочването?"
+
+# Extend MySQL function
+msgid "Extend MySQL"
+msgstr "Удължи периода на ползване на MySQL"
+
+msgid "Extend MySQL with"
+msgstr "Удължи периода на ползжане на MyQSL с"
+
+# IPN test (in test mode only)
+msgid "Instant Payment Notification - Test"
+msgstr "Instant Payment Notification - Test"
+
+# Log in page
+msgid "Log in"
+msgstr "Влез"
+
+msgid "Log in page"
+msgstr "Вход към системата"
+
+msgid "Lost password"
+msgstr "Загубена парола"
+
+msgid "New user"
+msgstr "Нов потребител"
+
+msgid "Free hosting"
+msgstr "Безплатен хостинг"
+
+# Log out page
+msgid "Log out"
+msgstr "Изход"
+
+msgid "Logged out!"
+msgstr "Излязохте успешно от системата!"
+
+msgid "Didn't log out click <a href=\"logout.php\">here</a> to try again."
+msgstr "Неуспешно излизане от системата. Кликнете<a href=\"logout.php\">тук</a>за да опитате отново."
+
+# New User function
+msgid "New User"
+msgstr "Нов потребител"
+
+msgid "Fill the User field!"
+msgstr "Попълнете полето Потребител!"
+
+msgid "Fill the Password field!"
+msgstr "Попълнете полето Парола!"
+
+msgid "Fill the Confirm password field!"
+msgstr "Попълнете полето Потвърдете паролата!"
+
+msgid "Fill the Domain or Local domain field!"
+msgstr "Попълнете полето Домейн или Локален домейн!"
+
+msgid "Fill only one of the two fields - Local domain or Domain!"
+msgstr "Попълнете само едно от полетата -Домейн или Локален домейн!"
+
+msgid "Fill the Email field!"
+msgstr "Попълнете полето Имейл!"
+
+msgid "Password must be at least 8 characters long!"
+msgstr "Паролата трябва да съдържа поде 8 символа!"
+
+msgid "Password and Confirm password fields must contain the same password!"
+msgstr "Полетата Парола и Потвърдете паролата тябва да съдържат една парола!"
+
+#The full phrase - The traffic have to be more than $inittraffic Mbytes per month!
+msgid "The traffic have to be more than"
+msgstr "Трафикът трябва да е повече от"
+
+msgid "Mbytes per month!"
+msgstr "Мбайта на месец!"
+
+# The full phrase - The hard disk usage have to be more than $initquota Mbytes!
+msgid "The hard disk usage have to be more than"
+msgstr "Дисковото пространство трябва да бъде повече от"
+
+msgid "Mbytes!"
+msgstr "Мбайта!"
+
+msgid "Fill out the form."
+msgstr "Попълнете формуляра."
+
+msgid "Contact email"
+msgstr "Имейл за контакти"
+
+msgid "Use MySQL"
+msgstr "Ще използвате ли MySQL"
+
+msgid "You must fill one of the next two fields. Fill the first one if you have not registered domain name.<br />"
+msgstr "Трябва да попълните едно от двете полета. Попълнете първото ако нямате регистриран домейн.<br />"
+
+msgid "Fill the second one if you allready have a registered domain. Can be of any type ( your_domain.com, your_domain.net ...). We will not register your domain name."
+msgstr "Попълнете второто ако имате регистриран домейн. Може да бъде от всякакъв вид ( your_domain.com, your_domain.net ...). Ние няма да регистрираме домейна Ви."
+
+msgid "Local domain name"
+msgstr "Локален домейн"
+
+msgid "Your domain name ( must be registered )"
+msgstr "Вашият домейн ( тябва да е регистриран )"
+
+msgid "Email accounts ( will be of type somename@your_domain.com )"
+msgstr "Пощенски кутии ( ще бъдат от вида somename@your_domain.com )"
+
+msgid "Use PHP and CGI"
+msgstr "Ще използвате ли PHP и CGI"
+
+msgid "Months to host your site"
+msgstr "Колко месеца да хостваме сайта Ви"
+
+msgid "Traffic"
+msgstr "Трафик"
+
+msgid "Mbytes per month."
+msgstr "Мбайта на месец."
+
+msgid "Hard disk usage"
+msgstr "Дисково пространство"
+
+msgid "Mbytes"
+msgstr "Мбайта"
+
+# Modify domain function
+msgid "Modify Domain"
+msgstr "Модифицирай домеин"
+
+msgid "Domain"
+msgstr "Домейн"
+
+msgid "Expiry date"
+msgstr "Ще хостваме вашия сайт до"
+
+# MySQL function
+msgid "Database with that name already exist. Can't create database."
+msgstr "База данни със същото име вече съществува. Не мога да създам базата данни."
+
+# Full phrase - Database $p_database created
+msgid " Database"
+msgstr "Базата данни е"
+
+msgid "created"
+msgstr "създадена"
+
+# Full phrase - You can't create more than $num_db databases
+msgid "You can't create more than"
+msgstr "Не можете да създадете повече от"
+
+msgid "databases"
+msgstr "бази данни"
+
+msgid "You can create"
+msgstr "Можете да създадете"
+
+msgid "Create database"
+msgstr "Създай база данни"
+
+msgid "MySQL"
+msgstr "MySQL"
+
+msgid "Create"
+msgstr "Създай"
+
+msgid "Database"
+msgstr "База данни"
+
+msgid "database"
+msgstr "база данни"
+
+# Full phrase - Are you sure you want to drop database $row_db[Db] ?
+msgid "Are you sure you want to drop database"
+msgstr "Сигурен ли сте че искате да изтриете базата данни"
+
+msgid "Manage databases with phpMyAdmin"
+msgstr "Управлявайте базите данни с phpMyAdmin"
+
+msgid "Drop"
+msgstr "Изтрий"
+
+# ERRORS
+msgid "error connect db"
+msgstr "грешка при връзката с базата данни"
+
+msgid "error select db"
+msgstr "грешка при избора на базата данни"
+
+msgid "error query db"
+msgstr "грешка при запитване на базата данни"
+
+msgid "Can't insert in db"
+msgstr "Не мога да вмъкна в базата данни"
+
+msgid "Can't update db"
+msgstr "Не мога да обновя базата данни"
+
+msgid "Fill in the fields marked with *"
+msgstr "Попълнете полетата маркирани с *"
+
+msgid "Can't select the requested element."
+msgstr "Не мога да избера желания елемент."
+
+msgid "User with the same name already exists."
+msgstr "Потребител със същото име вече съществува."
+
+msgid "Wrong user or password."
+msgstr "Грешен потребител или парола."
+
+msgid "The domain you chose is busy. Make another choice."
+msgstr "Избраният домейн е зает. Изберете друг."
+
+msgid "The password must be at least 8 characters long!"
+msgstr "Паролата трябвада съдържа поне 8 символа"
+
+msgid "Can't make directory."
+msgstr "Не мога да създам директория."
+
+msgid "Can't delete the element from the database."
+msgstr "Не мога да изтрия елемента от базата данни"
+
+msgid "You first have to delete all subdomains of this domain before deleting it!"
+msgstr "Трябва да изриете всички поддомейни преди са изтриете самия домейн"
+
+msgid "Limit reached. If you want to create more email accounts click Domains and the modify link for the proper domain."
+msgstr "Достигнат е лимитът. Ако желаете да създадете повече пощенски кутии кликнете линковете Домейни и Промени за съответния домейн."
+
+msgid "Some of the fields contain not allowed characters ( ; \" $ ...)!"
+msgstr "Някое от полетата съдържа непозволени символи ( ; \" $ ...)!"
+
+msgid "The user and domain name must not contain \"@\"  \".\" or space!"
+msgstr "Потребителското име и домейнът не трябва да съдържат \"@\"  \".\" or space!"
+
+msgid "The user and domain name must not contain \"@\" or space!"
+msgstr "Потребителското име и домейнът не трябжа да съдържат \"@\" or space!"
+
+msgid "The user name must not begin with a number!"
+msgstr "Потребителското име не трябва да започва с цифра!"
+
+# Navigation
+msgid "Navigation"
+msgstr "Навигация"
+
+msgid "Home"
+msgstr "Начало"
+
+msgid "File Manager"
+msgstr "Файлов мениджър"
+
+msgid "Cron"
+msgstr "Cron"
+
+# New domain function
+msgid "New Domain"
+msgstr "Нов домейн"
+
+# New subdomain function
+msgid "New Subdomain"
+msgstr "Нов поддомейн"
+
+msgid "Fill the Subdomain field!"
+msgstr "Попълнете полето Поддомейн!"
+
+msgid "Subdomain"
+msgstr "Поддомейн"
+
+msgid "New Email"
+msgstr "Нов имейл"
+
+msgid "Email must be at least 2 characters long!"
+msgstr "Имейлът трябва да съдържа поне 2 символа!"
+
+# Forward to function
+msgid "Forward Email"
+msgstr "Пренасочване на имейл"
+
+msgid "Fill the Forward to field!"
+msgstr "Попълнете полето Пренасочи към!"
+
+# New folder function
+msgid "New Folder"
+msgstr "Нова директория"
+
+# Activate messages
+msgid "MySQL is activated."
+msgstr "Можете да използвате MySQL."
+
+msgid "MySQL is extended."
+msgstr "MySQL - срокът удължен."
+
+msgid "Your domain is modified."
+msgstr "Характеристиките на домейна Ви са променени."
+
+msgid "Your subdomain is modified."
+msgstr "Характеристиките на поддомейна Ви са променени."
+
+msgid "Your domain is registered."
+msgstr "Домейнът Ви е регистриран."
+
+msgid "Your subdomain is registered."
+msgstr "Поддомейнът Ви е регистриран."
+
+msgid "You are registered and may log in from the home page."
+msgstr "Вече сте регистриран и можете да влезете в системата през началната страница."
+
+# Server file manager
+msgid "Server File Manager"
+msgstr "Файлов мениджър - сървър"
+
+msgid "S E R V E R"
+msgstr "С Ъ Р В Ъ Р"
+
+msgid "size Kbytes"
+msgstr "размер Кбайт"
+
+msgid "edit"
+msgstr "редактирай"
+
+msgid "properties"
+msgstr "характеристики"
+
+msgid "Copy"
+msgstr "Копирай"
+
+msgid "Paste"
+msgstr "Вмъкни"
+
+msgid "Delete these files and folders?"
+msgstr "Да изтрия тези файлове и директории?"
+
+msgid "Properties updated."
+msgstr "Характеристиките са обновени."
+
+msgid "Activate MySQL."
+msgstr "Активирай MySQL."
+
+msgid "MySQL expiry date"
+msgstr "Можете да използвате MySQL до"
+
+msgid "extend"
+msgstr "продължи"
+
+# Change category for free domain
+msgid "Change category."
+msgstr "Промяна на категорията."
+
+msgid "Category"
+msgstr "Категория"
+
+# New free user
+msgid "Register"
+msgstr "Регистрирай"
+
+# If the user clicks twice the free hosting confirmation link
+# Full phrase You are either already registered and may log in from the Home page or your account is not free.
+msgid "You are either already registered and may log in from the"
+msgstr "Или вече сте регистриран и можете да влезете през"
+
+msgid "Home page"
+msgstr "Началната страница"
+
+msgid "or your account is not free!"
+msgstr "или акаунтът Ви не е безплатен!"
+
+# MySQL not registered
+msgid "You are not registered MySQL user. To register click User Properties."
+msgstr "Не сте регистриран като MySQL потребител. За да се регистрирате кликнете Потребителски характеристики."
+
+# Lost password function
+msgid "The password will be sent to the email you provide when registering."
+msgstr "Паролата Ви ще бъде изпратена на имейл адреса попълнен при регистрацията."
+
+msgid "Send password"
+msgstr "Изпрати паролата"
+
+# Register free account
+# Full phrase - Contact email: ... Will be used to confirm the registration.
+msgid "Will be used to confirm the registration."
+msgstr "Ще бъде използван за потвърждение на регистрацията."
+
+msgid "Web Hosting Toolkit sent an email to the following address:"
+msgstr "Web Hosting Toolkit изпрати имейл на следния адрес:"
+
+msgid "The email contains a link for confirmation of the registration."
+msgstr "Имейлът съдържа линк за потвърждаване на регистрацията."
+
+# Full phrase - You are registered and may log in from the Home page.
+msgid "You are registered and may log in from the"
+msgstr "Вие сте регистриран и можете да влезете през"
+
+# Lost password function
+msgid "Password sent."
+msgstr "Паролата е изпратена."
+
+msgid "Wrong password!"
+msgstr "Грешна парола!"
+
+# Administration area
+msgid "Log in page for the administrator."
+msgstr "Вход за администратора."
+
+msgid "Change administrator's password."
+msgstr "Промени паролата на администратора."
+
+msgid "Notify"
+msgstr "Уведоми"
+
+msgid "comment"
+msgstr "киментар"
+
+msgid "date"
+msgstr "дата"
+
+msgid "user"
+msgstr "потребител"
+
+# Change email password
+msgid "Password changed."
+msgstr "Паролата е променена."
+
+# Change user properties
+msgid "If you want to deactivate MySQL uncheck"
+msgstr "Ако искате да деактивирате MySQL премахнете отметката"
+
+msgid "This will not delete the databases created from the user."
+msgstr "Това няма де изтрие базите данни създадени от потребителя."
+
+msgid "Change MySQL expiry date"
+msgstr "Промени даната на валидност на MySQL"
+
+msgid "Activate MySQL again"
+msgstr "Активирай MySQL отново"
+
+# full info function
+msgid "This is a free account."
+msgstr "Безплатен хостинг."
+
+msgid "Registration date"
+msgstr "Дата на регистриране"
+
+msgid "Traffic till the last log rotation"
+msgstr "Трафик до последната ротация на лог файла"
+
+msgid "PHP and CGI"
+msgstr "PHP и CGI"
+
+msgid "Email accounts"
+msgstr "Пощенски кутии"
+
+# Search domains
+msgid "Total domains"
+msgstr "Всички домейни"
+
+msgid "matches found. Pages"
+msgstr "съвпадения намерени. Страници"
+
+msgid "If you delete this domain WHT will not delete Apache's and BIND's conf entries!"
+msgstr "Ако изтриете този домейн WHT няма да промени конфигурацията на Apache и BIND засягащи домейна!"
+
+msgid "Change properties"
+msgstr "Промени характеристиките"
+
+# Full phrase - If you delete user $user you will delete all domains, databases and email accounts created from the user !!!   Delete ?
+msgid "If you delete user"
+msgstr "Ако изтриете потребителя"
+
+msgid "you will delete all domains, databases and email accounts created from the user !!!   Delete ?"
+msgstr "ще изтриете всички домейни, бази данни и пощенски кутии създадени от потребителя!!! Да изтрия ли потребителя?"
+
+msgid "contact email"
+msgstr "имейл за контакти"
+
+msgid "Databases"
+msgstr "Бази данни"
+
+msgid "New domain"
+msgstr "Нов домейн"
+
+msgid "Full info"
+msgstr "Пълна информация"
+
+msgid "Can not find domain"
+msgstr "Няма домейн"
+
+# Search users
+msgid "domains found. Pages"
+msgstr "домейнa намерени. Страници"
+
+msgid "Can not find user"
+msgstr "Няма потребител"
+
+# Full phrase - User $user has no domains.
+msgid "has no domains."
+msgstr "няма домейни."
+
+# Modify domain function in the admin area
+msgid "Do not enable PHP and CGI unless you uncheck free.<br />"
+msgstr "Не можете да използвате PHP и CGI ако хостингът е безплатен.<br />"
+
+msgid "Free"
+msgstr "Безплатен"
+
+msgid "Kbytes"
+msgstr "Кбайта"
+
+msgid "Domain name"
+msgstr "Домейн"
+
+# Register new user in the admin area
+msgid "User with the following features is registered:"
+msgstr "Регистриран е потребител със следните характеристики:"
+
+msgid "Price"
+msgstr "Цена"
+
+msgid "Months to host the site"
+msgstr "Месеца хостинг"
+
+# Register new free account in the admin area
+msgid "Free account with the following features is created:"
+msgstr "Регистриран е безплатен хостинг акаунт със следните характеристики:"
+
+# Register new domain in the admin area
+msgid "Domain with the following features is created:"
+msgstr "Създаден е домейн със следните харктеристики:"
+
+# Register new subdomain in the admin area
+msgid "Subdomain with the following features is created:"
+msgstr "Създаден е поддомейн със следните характеристики:"
+
+# Set the admin password
+msgid "The administrator username is admin."
+msgstr "Потребителското име на администратора е admin."
+
+msgid "Set a password for admin. It must be 8 characters long."
+msgstr "Изберете парола за admin . Трябва да съдържа поне 8 символа."
+
+msgid "To change the admin password provide it and fill the new value. The new value must be 8 characters long."
+msgstr "За да промените паролата на admin въведете старата парола и напишете новата стойност. Новата стойност трябва да съдържа поне 8 символа."
+
+msgid "Old password"
+msgstr "Стра парола"
+
+msgid "New password"
+msgstr "Нова парола"
+
+msgid "Confirm new password"
+msgstr "Потвърдете новата парола"
+
+msgid "search"
+msgstr "търси"
