@@ -25,7 +25,7 @@ FreeBSD
 License
 =======
 
-GPLv3
+[GPLv3](http://www.gnu.org/licenses/gpl.txt)
 
 
 
