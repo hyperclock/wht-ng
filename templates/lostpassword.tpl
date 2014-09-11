@@ -8,7 +8,7 @@ echo("<?xml version=\"1.0\" encoding=\"$charset\"?>");
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang="<?php echo($lang); ?>" xml:lang="<?php echo($lang); ?>" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title><?php echo _("Web Hosting Toolkit") ?></title>
+<title><?php echo _("Web Hosting Toolkit - Next Generation") ?></title>
 <meta http-equiv="Content-type" content="text/html; charset=<?php echo($charset); ?>" />
 <link rel="stylesheet" type="text/css" href="css/<?php echo($stylesheet); ?>/style.css" />
 </head>

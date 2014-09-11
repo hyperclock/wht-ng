@@ -1,8 +1,8 @@
-<div align="center" style="font-size: 90%;">
+<div align="center" style="font-size: 70%;">
 <br />
 <br />
 <br />
 <br />
-developer: Nikolay Ivanov <i>email: </i>
-<a href="mailto:nivanov@email.com">nivanov@email.com</a>
+&copy; 2014 JMColeman&nsbp;&nspb; <i>email: </i>
+<a href="mailto:hyperclock@ok.de">hyperclock</a>
 </div>
