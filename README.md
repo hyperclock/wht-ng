@@ -19,7 +19,7 @@ Features
 Platform
 ========
 
-FreeBSD
+[FreeBSD](http://freebsd.org)
 
 
 License
