@@ -232,7 +232,7 @@ echo("</td><td>");
 
 $up=substr($up, 1);
 
-echo(" <a href=\"server_filemanager.php?dir=".$up."\" title=\"up\"><IMG SRC=\"images/up.gif\" hight=\"25\" width=\"25\" ALT=\"up\"></a>");
+echo(" <a href=\"server_filemanager.php?dir=".$up."\" title=\"up\"><IMG SRC=\"images/up.png\" hight=\"25\" width=\"25\" ALT=\"up\"></a>");
 
 echo("</td></tr></table><p>");
 
@@ -364,7 +364,7 @@ echo("12");
 
 			$size_dir=ceil($size_dir);
 
- 			echo("<tr><td width=\"30\"><input type=\"checkbox\" name=\"checkdir[]\"value=\"".$cleared[$i][8]."\"></td><td width=\"30\"><a href=\"server_filemanager.php?dir=".$cleared[$i][8]."&down=down\" onClick=\"ups()\"><IMG SRC=\"images/folder.gif\" ALT=\"dir\"align=\"left\"></a></td><td>&nbsp;".$cleared[$i][8]."&nbsp;</td><td>&nbsp;".$size_dir."&nbsp;</td></tr>");
+ 			echo("<tr><td width=\"30\"><input type=\"checkbox\" name=\"checkdir[]\"value=\"".$cleared[$i][8]."\"></td><td width=\"30\"><a href=\"server_filemanager.php?dir=".$cleared[$i][8]."&down=down\" onClick=\"ups()\"><IMG SRC=\"images/folder.png\" ALT=\"dir\"align=\"left\"></a></td><td>&nbsp;".$cleared[$i][8]."&nbsp;</td><td>&nbsp;".$size_dir."&nbsp;</td></tr>");
 			}
 
 
@@ -380,7 +380,7 @@ echo("13");
 				
 				$size_file=ceil($size_file);
 
-				echo("<tr><td width=\"30\"><input type=\"checkbox\" name=\"checkfile[]\"value=\"".$cleared[$i][8]."\"></td><td width=\"30\"><IMG SRC=\"images/file.gif\" ALT=\"file\"align=\"left\"></td><td>&nbsp;".$cleared[$i][8]."&nbsp;</td><td>&nbsp;".$size_file."&nbsp;</td><td> <a href=\"javascript:edit_file('$real_dir', '".$cleared[$i][8]."')\"> edit </a> </td><td><a href=\"javascript:chmod('$real_dir', '".$cleared[$i][8]."')\"> properties </a></td></tr>");
+				echo("<tr><td width=\"30\"><input type=\"checkbox\" name=\"checkfile[]\"value=\"".$cleared[$i][8]."\"></td><td width=\"30\"><IMG SRC=\"images/file.png\" ALT=\"file\"align=\"left\"></td><td>&nbsp;".$cleared[$i][8]."&nbsp;</td><td>&nbsp;".$size_file."&nbsp;</td><td> <a href=\"javascript:edit_file('$real_dir', '".$cleared[$i][8]."')\"> edit </a> </td><td><a href=\"javascript:chmod('$real_dir', '".$cleared[$i][8]."')\"> properties </a></td></tr>");
 				}
 
 		}

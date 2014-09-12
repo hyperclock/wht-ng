@@ -159,7 +159,7 @@ echo("</td><td>");
 $up = substr($up, 1);
 
 echo(" <a href=\"cron_browse.php?dir=" . $up . "\" title=\"" . _("up") . "\">
-<IMG SRC=\"images/up.gif\" hight=\"25\" width=\"25\" ALT=\"" . _("up") . "\"></a>");
+<IMG SRC=\"images/up.png\" hight=\"25\" width=\"25\" ALT=\"" . _("up") . "\"></a>");
 
 echo("</td></tr></table><br />");
 
@@ -200,7 +200,7 @@ if ((!$conn_id) || (!$login_result)) {
     for($i = 0; $i < sizeof($directory_list['directory']['name']); $i++) {
         echo("<tr><td width=\"30\"><a href=\"cron_browse.php?dir="
         . $directory_list['directory']['name'][$i] . "&down=down\" onClick=\"ups()\">
-        <IMG SRC=\"images/folder.gif\" ALT=\"dir\"align=\"left\"></a></td><td>&nbsp;"
+        <IMG SRC=\"images/folder.png\" ALT=\"dir\"align=\"left\"></a></td><td>&nbsp;"
         . $directory_list['directory']['name'][$i] . "&nbsp;</td></tr>");
     }
 
@@ -210,7 +210,7 @@ if ((!$conn_id) || (!$login_result)) {
         } else {
             $choose_dir="/$real_dir";
         }
-        echo("<tr><td width=\"30\"><a href=\"javascript:choose('$choose_dir".$directory_list[file][name][$i]."');\"><IMG SRC=\"images/file.gif\" ALT=\"file\"align=\"left\"></a></td><td>&nbsp;".$directory_list[file][name][$i]."&nbsp;</td></tr>");
+        echo("<tr><td width=\"30\"><a href=\"javascript:choose('$choose_dir".$directory_list[file][name][$i]."');\"><IMG SRC=\"images/file.png\" ALT=\"file\"align=\"left\"></a></td><td>&nbsp;".$directory_list[file][name][$i]."&nbsp;</td></tr>");
     }
 }
 	

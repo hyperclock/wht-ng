@@ -35,8 +35,8 @@ if($_SESSION['login']==="yes") {
     
         require_once '../execute_cmd.php';
         
-        $result = execute_cmd("msgfmt -o $DocumentRoot/$version/locale/$p_code/LC_MESSAGES/wht.mo \
-$DocumentRoot/$version/locale/$p_code/LC_MESSAGES/wht.po");
+        $result = execute_cmd("msgfmt -o $DocumentRoot/$version/locale/$p_code/LC_MESSAGES/wht-ng.mo \
+$DocumentRoot/$version/locale/$p_code/LC_MESSAGES/wht-ng.po");
 
     }
 

@@ -21,7 +21,7 @@
 
 echo("type your domain name (where WHT is installed): ");
 
-$version = "wht";
+$version = "wht-ng";
 
 $stdin = fopen('php://stdin', 'r');
 

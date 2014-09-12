@@ -196,7 +196,7 @@ echo("</select>");
 
 echo("</td><td>");
 
-echo(" <a href=\"server_filemanager.php?dir=" . $up . "\" title=\"" . _("up") . "\"><IMG SRC=\"images/up.gif\" hight=\"25\" width=\"25\" ALT=\"up\"></a>");
+echo(" <a href=\"server_filemanager.php?dir=" . $up . "\" title=\"" . _("up") . "\"><IMG SRC=\"images/up.png\" hight=\"25\" width=\"25\" ALT=\"up\"></a>");
 
 echo("</td></tr></table><br />");
 
@@ -300,7 +300,7 @@ if((!$conn_id) || (!$login_result)) {
 
         echo("<tr><td width=\"30\"><input type=\"checkbox\" name=\"checkdir[]\"value=\"" . $directory_list[directory][name][$i] . "\"></td>
         <td width=\"30\"><a href=\"server_filemanager.php?dir=" . $directory_list['directory']['name'][$i] . "&down=down\" onclick=\"ups()\">
-        <IMG SRC=\"images/folder.gif\" ALT=\"dir\"align=\"left\"></a></td>
+        <IMG SRC=\"images/folder.png\" ALT=\"dir\"align=\"left\"></a></td>
         <td>&nbsp;" . $directory_list['directory']['name'][$i] . "&nbsp;</td>
         <td>&nbsp;" . $size_dir . "&nbsp;</td>
         <td></td>
@@ -312,7 +312,7 @@ if((!$conn_id) || (!$login_result)) {
         $directory_list['file']['size'][$i] = ceil($directory_list['file']['size'][$i] / 1024);
 
         echo("<tr><td width=\"30\"><input type=\"checkbox\" name=\"checkfile[]\"value=\"" . $directory_list['file']['name'][$i] . "\"></td>
-        <td width=\"30\"><IMG SRC=\"images/file.gif\" ALT=\"file\"align=\"left\"></td>
+        <td width=\"30\"><IMG SRC=\"images/file.png\" ALT=\"file\"align=\"left\"></td>
         <td>&nbsp;" . $directory_list['file']['name'][$i] . "&nbsp;</td>
         <td>&nbsp;" . $directory_list['file']['size'][$i] . "&nbsp;</td>
         <td> <a href=\"javascript:edit_file('$real_dir', '" . $directory_list['file']['name'][$i] . "')\">" . _("edit") . "</a></td>

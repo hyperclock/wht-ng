@@ -77,7 +77,7 @@ echo("<?xml version=\"1.0\" encoding=\"$charset\"?>");
 include_once './templates/header.php';
 ?>
  <div align="center">
-If you see this page WHT is in test mode! <br /><br />
+If you see this page WHT-NG is in test mode! <br /><br />
 <table width="90%" cellspacing="0" cellpadding="3" border="0">
 <tbody>
 <form name="ipntest" action="ipntest.php" method="post" accept-charset="ISO-8859-1">

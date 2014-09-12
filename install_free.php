@@ -45,7 +45,7 @@ $fp = fopen($file, "r");
 while(!feof($fp)) {
     $line = fgets($fp, 1024);
 
-    if($line == "//wht\n") {
+    if($line == "//wht-ng\n") {
         $output .= "printf(\"<script type=\\\"text/javascript\\\" src=\\\"http://$domain_name/$version/wht-ng_advertise.php?domain=\");\n";
         $output .= "printf(getenv(\"PATH_TRANSLATED\"));";
         $output .= "\nprintf(\"\\\"> </script>\");";
