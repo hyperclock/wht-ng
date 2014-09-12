@@ -19,13 +19,13 @@ Features
 Platform
 ========
 
-FreeBSD
+[FreeBSD](http://freebsd.org)
 
 
 License
 =======
 
-GPLv3
+[GPLv3](http://www.gnu.org/licenses/gpl.txt)
 
 
 
