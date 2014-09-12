@@ -1,4 +1,4 @@
-WHT will not tell the user how to register his domain name.
+WHT-NG will not tell the user how to register his domain name.
 The administrator have to inform the user: 
 
 
