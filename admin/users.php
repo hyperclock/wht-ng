@@ -66,7 +66,7 @@ if($_SESSION['login'] === "yes") {
     if($g_restart === "yes") {
         require_once '../execute_cmd.php';
 
-        execute_cmd("../wht_cron.php 1");
+        execute_cmd("../wht-ng_cron.php 1");
     }
 
     if($g_num != "") {

@@ -37,9 +37,9 @@ while (!feof ($file)) {
 
 fclose($file);
 
-echo("<script type=\"text/javascript\" src=\"http://$host_name/$version/wht_advertise.php?domain=$path_translated\"> </script>");
+echo("<script type=\"text/javascript\" src=\"http://$host_name/$version/wht-ng_advertise.php?domain=$path_translated\"> </script>");
 //echo("<script type=\"text/javascript\">\n");
-//require("$DocumentRoot/$version/wht_advertise.php");
+//require("$DocumentRoot/$version/wht-ng_advertise.php");
 //echo("\n</script>");
 
 ?>

@@ -66,7 +66,7 @@ if($_SESSION['login'] === "yes") {
     if($g_restart === "yes") {
         require_once '../execute_cmd.php';
 
-        execute_cmd("../wht_cron.php 1");
+        execute_cmd("../wht-ng_cron.php 1");
     }
 
     if($g_num != "") {
@@ -133,7 +133,7 @@ if($_SESSION['login'] === "yes") {
         echo("<br /><br />To register new domain without WHT to change Apache's and BIND's configurations click <a href=\"newdomain_nr.php\" > here </a>");
         echo("<br /><br /> A postmaster email account will be created with a password from the configuration file (the variable \$postmaster_password)");
         echo("<br /><br />If you have deleted a user and intend to restart apache it will fail. To fix the problem");
-        echo(" start wht_cron.php from the command line or from here <br /><br /><a href=\"domains.php?restart=yes\">wht_cron.php</a><br /><br />");
+        echo(" start wht-ng_cron.php from the command line or from here <br /><br /><a href=\"domains.php?restart=yes\">wht-ng_cron.php</a><br /><br />");
         echo("<a href=\"manage_content.php\">Manage content</a>");
     } else {
         if($p_search != "") {

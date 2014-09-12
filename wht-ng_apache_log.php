@@ -24,7 +24,7 @@ require_once './errors_inc.php';
 
 error_reporting(E_ERROR);
 
-system("./wht_awstats_update.php");
+system("./wht-ng_awstats_update.php");
 
 $transfer_logs = "on";
 

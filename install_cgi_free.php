@@ -32,14 +32,14 @@ $domain_name = substr($domain_name, 0, strlen($domain_name) - 1);
 fclose($stdin);
 
 
-$file = "cgi-bin/wht_ext_filter.c";
+$file = "cgi-bin/wht-ng_ext_filter.c";
 $fp = fopen($file, "r");
 
 while(!feof($fp)) {
     $line = fgets($fp, 1024);
 
     if($line == "//wht\n") {
-        $output .= "printf(\"<script type=\\\"text/javascript\\\" src=\\\"http://$domain_name/$version/wht_advertise.php?domain=\");\n";
+        $output .= "printf(\"<script type=\\\"text/javascript\\\" src=\\\"http://$domain_name/$version/wht-ng_advertise.php?domain=\");\n";
         $output .= "printf(argv[1]);";
         $output .= "\nprintf(\"\\\"> </script>\");";
     } else {
@@ -51,7 +51,7 @@ fclose($fp);
 
 
 
-$file = "cgi-bin/wht_ext_filter.out.c";
+$file = "cgi-bin/wht-ng_ext_filter.out.c";
 
 $fp = fopen($file, "w+") or die("Can't open " . $file);
 
@@ -59,5 +59,5 @@ fwrite($fp, $output);
 
 fclose($fp);
 
-system("g++ -o /bin/wht_ext_filter cgi-bin/wht_ext_filter.out.c");
+system("g++ -o /bin/wht-ng_ext_filter cgi-bin/wht-ng_ext_filter.out.c");
 ?>

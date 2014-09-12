@@ -56,8 +56,8 @@ if (IsSet( $HTTP_GET_VARS['error']) && $HTTP_GET_VARS['error'] == "error_fill") 
 <?php echo _("Log in page"); ?>.
 <br />
 <br />
-&nbsp; <a href="http://wht.sourceforge.net" target="_top">
-<img src="images/wht_black.png"> </a>
+&nbsp; <a href="http://wht-ng.tk/" target="_top">
+<img src="images/wht-ng_logo.png"> </a>
 </td >
 <td valign="top" align="right">
 Language:

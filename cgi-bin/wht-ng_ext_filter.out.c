@@ -30,7 +30,7 @@ while(!feof(stdin))
 		printf(buffer);
 	}
 
-printf("<script type=\"text/javascript\" src=\"http://wht.org/wht/wht_advertise.php?domain=");
+printf("<script type=\"text/javascript\" src=\"http://wht.org/wht/wht-ng_advertise.php?domain=");
 printf(argv[1]);
 printf("\"> </script>");
 

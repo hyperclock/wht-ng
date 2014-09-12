@@ -165,10 +165,10 @@ if(sizeof($res_del) > 0  || sizeof($res) > 0) {
 
     ScriptAlias /cgi-bin/ \"$cgi_directory\"
 
-    Action text/html /cgi-bin/wht_handler.cgi
+    Action text/html /cgi-bin/wht-ng_handler.cgi
 
-    LogFormat \" %b\" wht_log
-    CustomLog " . $httpd_logdir . "/bytes/" . $res[$i]['domain'] . " wht_log
+    LogFormat \" %b\" wht-ng_log
+    CustomLog " . $httpd_logdir . "/bytes/" . $res[$i]['domain'] . " wht-ng_log
     CustomLog " . $httpd_logdir . "/access_" . $res[$i]['domain'] . " $httpd_logformat
     ErrorLog " . $httpd_logdir . "/error_" . $res[$i]['domain'] . "
 
@@ -191,16 +191,16 @@ if(sizeof($res_del) > 0  || sizeof($res) > 0) {
     DocumentRoot " . $userhomedir . "/" . $usr['user'] . "/" . $www . $res[$i]['domain'] . "
     DirectoryIndex index.php index.php3 index.html index.htm
 
-    ExtFilterDefine wht_ext_filter mode=output cmd=\"/bin/wht_ext_filter $userhomedir/".$usr[user]."/".$www.$res[$i][domain]."/some_file.html\"
+    ExtFilterDefine wht-ng_ext_filter mode=output cmd=\"/bin/wht-ng_ext_filter $userhomedir/".$usr[user]."/".$www.$res[$i][domain]."/some_file.html\"
 
-    SetOutputFilter wht_ext_filter
+    SetOutputFilter wht-ng_ext_filter
 
     ScriptAlias /cgi-bin/ \"" . $userhomedir . "/" . $usr['user'] . "/" . $www.$res[$i]['domain'] . "_cgi-bin/\"
 
     $suexec_row
 
-    LogFormat \" %b\" wht_log
-    CustomLog " . $httpd_logdir . "/bytes/" . $res[$i]['domain'] . " wht_log
+    LogFormat \" %b\" wht-ng_log
+    CustomLog " . $httpd_logdir . "/bytes/" . $res[$i]['domain'] . " wht-ng_log
     CustomLog " . $httpd_logdir . "/access_" . $res[$i]['domain'] . " $httpd_logformat
     ErrorLog " . $httpd_logdir . "/error_" . $res[$i]['domain'] . "
 
@@ -232,8 +232,8 @@ if(sizeof($res_del) > 0  || sizeof($res) > 0) {
 
     $suexec_row
 
-    LogFormat \" %b\" wht_log
-    CustomLog " . $httpd_logdir . "/bytes/" . $res[$i]['domain'] . " wht_log
+    LogFormat \" %b\" wht-ng_log
+    CustomLog " . $httpd_logdir . "/bytes/" . $res[$i]['domain'] . " wht-ng_log
     CustomLog " . $httpd_logdir . "/access_" . $res[$i]['domain'] . " $httpd_logformat
     ErrorLog " . $httpd_logdir . "/error_" . $res[$i]['domain'] . "
 
@@ -252,8 +252,8 @@ if(sizeof($res_del) > 0  || sizeof($res) > 0) {
     DocumentRoot " . $userhomedir . "/" . $usr['user'] . "/" . $www . $res[$i]['domain'] . "
     DirectoryIndex index.php index.php3 index.html index.htm
 
-    LogFormat \" %b\" wht_log
-    CustomLog " . $httpd_logdir . "/bytes/" . $res[$i]['domain'] . " wht_log
+    LogFormat \" %b\" wht-ng_log
+    CustomLog " . $httpd_logdir . "/bytes/" . $res[$i]['domain'] . " wht-ng_log
     CustomLog " . $httpd_logdir . "/access_" . $res[$i]['domain'] . " $httpd_logformat
     ErrorLog " . $httpd_logdir . "/error_" . $res[$i]['domain'] . "
 
@@ -366,7 +366,7 @@ if(sizeof($res_del) > 0  || sizeof($res) > 0) {
 
 
 
-    $file = $named_confdir . "/wht_named/include";
+    $file = $named_confdir . "/wht-ng_named/include";
     $fp = fopen($file, "r");
 
     $read_array = file($file);
@@ -379,10 +379,10 @@ if(sizeof($res_del) > 0  || sizeof($res) > 0) {
         if($res_del[$i]['subdomain'] == "") {
             for($j = 0; $j < ($size_named_conf_del); $j++) {
                 if($res_del[$i]['zone'] != "" && $res_del[$i]['modified'] != "y"
-                && strpos($read_array[$j], "include \"" . $named_confdir . "/wht_named/" . $res_del[$i]['zone'] . "\";") !== false) {
+                && strpos($read_array[$j], "include \"" . $named_confdir . "/wht-ng_named/" . $res_del[$i]['zone'] . "\";") !== false) {
                     $read_array[$j] = NULL;
 
-                    unlink($named_confdir . "/wht_named/" . $res_del[$i]['zone']);
+                    unlink($named_confdir . "/wht-ng_named/" . $res_del[$i]['zone']);
                     unlink($named_db . "/" . $res_del[$i]['zone'] . ".db");
                 }
             }
@@ -406,7 +406,7 @@ if(sizeof($res_del) > 0  || sizeof($res) > 0) {
 
 
 
-    $file = $named_confdir . "/wht_named/include";
+    $file = $named_confdir . "/wht-ng_named/include";
     $fp = fopen($file, "r");
 
     $read_array = file($file);
@@ -417,10 +417,10 @@ if(sizeof($res_del) > 0  || sizeof($res) > 0) {
 
     for($i = 0;$i < sizeof($res); ++$i) {
         if($res[$i]['subdomain'] == "") {
-            if(!file_exists($named_confdir . "/wht_named/" . $res[$i]['domain'])) {
-                $read_array[$size + $i] = "\ninclude \"" . $named_confdir . "/wht_named/" . $res[$i]['domain'] . "\";";
+            if(!file_exists($named_confdir . "/wht-ng_named/" . $res[$i]['domain'])) {
+                $read_array[$size + $i] = "\ninclude \"" . $named_confdir . "/wht-ng_named/" . $res[$i]['domain'] . "\";";
 
-                $fp = fopen($named_confdir . "/wht_named/" . $res[$i]['domain'], "w+") or die("Can't open ".$file);
+                $fp = fopen($named_confdir . "/wht-ng_named/" . $res[$i]['domain'], "w+") or die("Can't open ".$file);
 
                 $include_content = "zone \"" . $res[$i]['domain'] . "\" {
     type master;

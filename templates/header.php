@@ -20,7 +20,8 @@
 ?>
 
 <div align="center">
-<a href="http://hyperclock.github.io/wht-ng/index.html" target="_blank">Web Hosting Toolkit - Next Generation</a>
+<!-- <a href="http://hyperclock.github.io/wht-ng/index.html" target="_blank">WHT-NG @ GitHub</a> -->
+<a href="http://www.wht-ng.tk" target="_parent">Web Hosting Toolkit - Next Generation</a>
 <br />
 <br />
 </div>

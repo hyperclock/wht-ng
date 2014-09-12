@@ -24,6 +24,6 @@
 <br />
 <br />
 <br />
-&copy; 2014 JMColeman&nsbp;&nspb; <i>email: </i>
+&copy; 2014 JMColeman&nbsb;&nbsp; <i>email: </i>
 <a href="mailto:hyperclock@ok.de">hyperclock</a>
 </div>

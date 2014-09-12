@@ -26,7 +26,7 @@ while(!feof($stdin)) {
     echo($line);
 }
 
-echo("<script type=\"text/javascript\" src=\"http://wht.org/wht/wht_advertise.php?domain="
+echo("<script type=\"text/javascript\" src=\"http://wht.org/wht/wht-ng_advertise.php?domain="
 . $HTTP_SERVER_VARS['argv'][1] . "> </script>");
 
 fclose($stdin);
